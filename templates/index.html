@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8">
+   <title>550W超级系统</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <style>
+     /* Reset default browser styles */
+     body, ul {
+       margin: 0;
+       padding: 0;
+     }
+
+     /* Set font family and background color */
+     body {
+       font-family: Arial, sans-serif;
+       background-color: #f9f9f9;
+     }
+
+     /* Container layout */
+     .container {
+       display: flex;
+       height: 100vh;
+     }
+
+     /* Sidebar styles */
+     .sidebar {
+       width: 200px;
+       background-color: #fff;
+       border-right: 1px solid #ccc;
+     }
+     .sidebar ul {
+       list-style: none;
+       padding-top: 20px;
+     }
+     .sidebar li {
+       margin-bottom: 12px;
+     }
+     .sidebar a {
+       display: flex;
+       align-items: center;
+       color: #606060;
+       text-decoration: none;
+       padding: 8px 12px;
+       transition: background-color 0.3s;
+     }
+     .sidebar a:hover {
+       background-color: #f2f2f2;
+     }
+     .sidebar i {
+       margin-right: 8px;
+     }
+
+     /* Main content styles */
+     .main {
+       flex-grow: 1;
+       padding: 20px;
+       box-sizing: border-box;
+     }
+     #content iframe {
+       width: 100%;
+       height: calc(100vh - 40px); /* 调整此处的数值，根据实际情况设置iframe的高度 */
+       border: none;
+     }
+   </style>
+ </head>
+ <body>
+   <div class="container">
+     <div class="sidebar">
+       <ul>
+         <li>
+           <a href="#" onclick="showContent('出勤频率分布.html')">
+             <i class="fas fa-cloud"></i> 出勤频率分布
+           </a>
+         </li>
+         <li>
+           <a href="#" onclick="showContent('工资分布.html')">
+             <i class="fas fa-chart-pie"></i> 工资分布
+           </a>
+         </li>
+         <li>
+           <a href="#" onclick="showContent('实习期分布.html')">
+             <i class="fas fa-file-alt"></i> 实习期分布
+           </a>
+         </li>
+         <li>
+          <a href="#" onclick="showContent('所属行业分布图.html')">
+            <i class="fas fa-cloud"></i> 所属行业分布图
+          </a>
+        </li><li>
+          <a href="#" onclick="showContent('职位福利待遇.html')">
+            <i class="fas fa-cloud"></i> 职位福利待遇
+          </a>
+        </li><li>
+          <a href="#" onclick="showContent('wordcloud.html')">
+            <i class="fas fa-cloud"></i> 词云图
+          </a>
+        </li>
+       </ul>
+     </div>
+     <div class="main">
+       <div id="content">
+         <h1>欢迎来到实习僧网站大数据岗位数据分析系统</h1>
+         <p>请从右侧点击链接以访问图表</p>
+       </div>
+     </div>
+   </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+   <script>
+     function showContent(page) {
+       document.getElementById('content').innerHTML = '';
+       document.getElementById('content').innerHTML = '<iframe src="' + page + '" frameborder="0" width="100%" height="100%" scrolling="no"></iframe>';
+     }
+   </script>
+ </body>
+</html>
