@@ -1,4 +1,4 @@
-# Welcome to USE my Project ♂❀♂
+# welcome to use my project
 # 欢迎使用我的项目
 ## *使用前* __必读__
 ```
@@ -8,16 +8,25 @@ Python version ：3.9.13
 Database:Mysql version-5.8
 其它工具：phpmyadmin
 ```
-本项目所需依赖环境已在requirements.txt文件中
+食用方法：
+git clone https://github.com/YELLOWZAN/Shixiseng_visual_with_flask.git
+
+本项目所需依赖环境已在requirements.txt文件中。
 
 **使用前请先创建虚拟环境!**
+(具体创建方法自行百度，建议创建在项目根目录下)
 然后在虚拟环境内安装requirements.txt的依赖，运行命令：
 ```shell
 pip install -r requirements.txt
 ```
 建议使用pycharm专业版运行项目 
+如若使用vscode等其它编辑器请先激活虚拟环境，然后再在虚拟环境下执行主程序文件
+```shell
+(venv)powershell:python ./app.py
+```
+执行之后打开本地环回地址127.0.0.1:5000即可访问页面，如果需要进行公网访问请将host设置为0.0.0.0,端口随意但切勿与其它服务撞车。
 
-可视化流程大致如下：
+## 可视化流程大致如下：
 
 1.寻找数据，收集数据并处理好数据。
 
@@ -32,7 +41,7 @@ pip install -r requirements.txt
 __HTML、Python、JavaScript、Mysql、flask__
 
 
-**本项目为可视化课程项目设计，分为几大模块：**
+**本项目为河池学院大数据20班可视化课程项目设计，分为几大模块：**
 
 ## 1.数据爬取
 数据爬取文件夹位于项目根目录下的.\pa_chong\
@@ -41,7 +50,11 @@ __HTML、Python、JavaScript、Mysql、flask__
 
 然后，分析服务器是否存在反爬虫，比如字体反爬、ip封锁、验证码等，定制化相应的措施
 
-爬虫文件我本人手写，反爬程序为定制化反爬，禁止用于非法用途
+对于实习僧这个网站来说，反爬措施为字体反爬与IP封锁，我们仅需对其get(access)、token(parmas)、等做处理即可，然后进行字体重编码，因为其网页前端的字体为自定义字体。
+
+**爬虫文件我本人手写，反爬程序为定制化反爬，禁止用于非法用途！**
+**爬虫文件我本人手写，反爬程序为定制化反爬，禁止用于非法用途！**
+**爬虫文件我本人手写，反爬程序为定制化反爬，禁止用于非法用途！**
 
 ## 2.数据处理
 
@@ -54,6 +67,7 @@ __HTML、Python、JavaScript、Mysql、flask__
 
 ## 4.静态页面生成
 
+代码位于./page_create.ipynb ，其中OLD文件为旧的页面生成notebook文件。
 使用pyecharts代码整合我们所爬取到的数据进行生成静态页面，注意，echarts与pyecharts是两种不同的玩意！
 
 ## 5.前后端交互
